@@ -1,0 +1,2 @@
+https://github.com/ncarandini/KiCad-RP-Pico
+https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino%20XIAO%20KICAD.zip
