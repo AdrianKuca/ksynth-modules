@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name "MCU_RaspberryPi_and_Boards")(type "KiCad")(uri "${KIPRJMOD}/libraries/KiCad-RP-Pico-main/RP-Pico Libraries/MCU_RaspberryPi_and_Boards.kicad_sym")(options "")(descr ""))
   (lib (name "Seeeduino XIAO")(type "Legacy")(uri "${KIPRJMOD}/libraries/Seeeduino XIAO KICAD/Seeeduino XIAO.lib")(options "")(descr ""))
+  (lib (name "promicro")(type "Legacy")(uri "${KIPRJMOD}/libraries/ProMicroKiCad-master/promicro_library/promicro.lib")(options "")(descr ""))
 )
