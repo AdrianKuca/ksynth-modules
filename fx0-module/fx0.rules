@@ -1,0 +1,87 @@
+
+(rules PCB fx0
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 977)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    "Net-(J2-PadT)" GND CVOUTC "Net-(C1-Pad1)" "unconnected-(U1-Pad13)" 3V3 LOUT CVOUT
+    "unconnected-(U1-Pad9)" "unconnected-(U1-Pad8)" "unconnected-(U1-Pad7)" "unconnected-(U1-Pad6)" "unconnected-(U1-Pad5)" "unconnected-(U1-Pad4)" CVC LINC
+    "unconnected-(U1-Pad1)" "unconnected-(U1-Pad15)" "unconnected-(U1-Pad16)" "unconnected-(U1-Pad17)" "unconnected-(U1-Pad18)" "unconnected-(U1-Pad19)" "unconnected-(U1-Pad20)" "unconnected-(U3-Pad1)"
+    "unconnected-(U3-Pad2)" "unconnected-(U3-Pad3)" "unconnected-(U3-Pad4)" "unconnected-(U3-Pad5)" "unconnected-(U3-Pad6)" "unconnected-(U3-Pad7)" "unconnected-(U3-Pad8)" "unconnected-(U3-Pad9)"
+    "unconnected-(U3-Pad10)" "unconnected-(U3-Pad11)" "unconnected-(U3-Pad12)" "unconnected-(U3-Pad14)" "unconnected-(U3-Pad15)" "unconnected-(U3-Pad16)" "unconnected-(U3-Pad17)" "unconnected-(U3-Pad18)"
+    "unconnected-(U3-Pad19)" "unconnected-(U3-Pad20)" "unconnected-(U3-Pad21)" "unconnected-(U3-Pad22)" "unconnected-(U3-Pad23)" "Net-(C1-Pad2)" "Net-(CLINOUT1-Pad1)" "Net-(CLINOUT2-Pad1)"
+    LINOUTC "Net-(RCVOUT2-Pad1)" "Net-(RCVOUT2-Pad2)" "Net-(RLIN1-Pad2)" "Net-(RLINOUT2-Pad1)" "Net-(RLINOUT3-Pad2)" 5V "unconnected-(U2-Pad1)"
+    "unconnected-(U2-Pad2)" "unconnected-(U2-Pad3)" "unconnected-(U2-Pad4)" "unconnected-(U2-Pad5)" "unconnected-(U2-Pad6)" "unconnected-(U2-Pad7)" "unconnected-(U2-Pad8)" "unconnected-(U2-Pad9)"
+    "unconnected-(U2-Pad10)" "unconnected-(U2-Pad11)" "unconnected-(U2-Pad12)" "unconnected-(U2-Pad13)" "unconnected-(U2-Pad16)" "unconnected-(U2-Pad17)" "unconnected-(U2-Pad18)" "unconnected-(U2-Pad19)"
+    "unconnected-(U2-Pad21)" "unconnected-(U2-Pad22)" "unconnected-(U2-Pad23)" "unconnected-(U2-Pad24)" "unconnected-(U2-Pad25)" "unconnected-(U2-Pad26)" "unconnected-(U2-Pad27)" "unconnected-(U2-Pad28)"
+    "unconnected-(U2-Pad29)" "unconnected-(U2-Pad30)" "unconnected-(U2-Pad33)" "unconnected-(U2-Pad34)" "unconnected-(U2-Pad35)" "unconnected-(U2-Pad37)" "unconnected-(U2-Pad38)" "unconnected-(U2-Pad39)"
+    "unconnected-(U2-Pad40)" "unconnected-(U2-Pad41)" "unconnected-(U2-Pad42)" "unconnected-(U2-Pad43)"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
